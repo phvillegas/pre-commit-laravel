@@ -1,0 +1,18 @@
+- id: laravel-pint
+  name: Laravel Pint
+  description: Run Pint to automatically fix the code style of your Laravel app.
+  entry: hooks/laravel-pint.sh
+  language: script
+  files: \.php$
+  pass_filenames: true
+
+- id: laravel-tests
+  alias: laravel-tests
+  name: Laravel Test
+  description: Run project tests using the artisan CLI.
+  entry: hooks/laravel-tests.sh
+  language: script
+  files: \.php$
+  pass_filenames: false
+  args:
+    - "--without-tty"
